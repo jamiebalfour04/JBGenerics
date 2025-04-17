@@ -1,0 +1,1 @@
+JB Generics is a simple collection of UI elements used across some of my Java-based applications. It's designed to be packaged as a JAR and then included in applications that have a similar look at feel.
