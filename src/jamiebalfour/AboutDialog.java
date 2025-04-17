@@ -46,7 +46,14 @@ class AboutDialog extends JDialog {
 
     if(button != null){
       panel.add(button);
+      button.addActionListener(new ActionListener() {
+        @Override
+        public void actionPerformed(ActionEvent e) {
+          close(button);
+        }
+      });
     }
+
 
 
     final JButton btnDoneButton = new JButton("Done");
