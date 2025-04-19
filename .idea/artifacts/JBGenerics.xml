@@ -1,6 +1,6 @@
 <component name="ArtifactManager">
   <artifact type="jar" build-on-make="true" name="JBGenerics">
-    <output-path>$USER_HOME$/Library/CloudStorage/Dropbox/Programs/JARs</output-path>
+    <output-path>$USER_HOME$/Library/CloudStorage/Dropbox/Programs/JARs/</output-path>
     <root id="archive" name="JBGenerics.jar">
       <element id="directory" name="META-INF">
         <element id="file-copy" path="$PROJECT_DIR$/META-INF/MANIFEST.MF" />

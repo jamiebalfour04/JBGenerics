@@ -27,8 +27,8 @@ class CustomTitleBar extends JPanel {
     setLayout(new BorderLayout());
     mainColor = new Color(40, 75, 99);
     if (!isMac()) {
-      mainColor = new Color(240, 245, 249);
-      setForeground(Color.BLACK);
+      mainColor = new Color(0, 0, 0);
+      setForeground(Color.WHITE);
     }
 
     setPreferredSize(new Dimension(frame.getWidth() + 1, 40));
@@ -38,6 +38,14 @@ class CustomTitleBar extends JPanel {
     titleLabel.setFont(new Font("Segoe UI", Font.BOLD, 14));
     add(titleLabel, BorderLayout.CENTER);
     titleLabel.setForeground(Color.WHITE);
+
+
+    GlowingLabel gl = new GlowingLabel("Jamie");
+
+    JPanel leftPanel = new JPanel(new BorderLayout());
+
+    leftPanel.setOpaque(false);
+    leftPanel.add(gl, BorderLayout.EAST);
 
     if (!isMac()) {
       titleLabel.setForeground(Color.BLACK);
@@ -66,6 +74,7 @@ class CustomTitleBar extends JPanel {
         this.paintComponent(this.getGraphics());
       });
       buttonPanel.add(maxBtn);
+
 
       // Close button
       /*JButton closeBtn = createWindowsTitleButton("\u2715", 16); // Unicode "×"
@@ -129,8 +138,10 @@ class CustomTitleBar extends JPanel {
       });
       buttonPanel.add(maxBtn);
 
-      add(buttonPanel, BorderLayout.WEST);
+      leftPanel.add(buttonPanel, BorderLayout.WEST);
     }
+
+    add(leftPanel, BorderLayout.WEST);
 
 
     // Close button
